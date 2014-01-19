@@ -21,7 +21,7 @@ def connect(server, chan, nick, passwd):
         print(pong)
         connection.send(bytes(pong,'UTF-8'))
     print("Using nick {}".format(nick))
-    time.sleep(2)
+    time.sleep(5)
     connection.send(bytes("PRIVMSG NickServ :identify {}\r\n".format(passwd), 'UTF-8')) 
     connection.send(bytes("JOIN {}\r\n".format(chan), 'UTF-8'))
     return connection
